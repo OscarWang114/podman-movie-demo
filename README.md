@@ -1,9 +1,13 @@
 # podman-movie-demo
 
+A simple demo of using [podman](https://podman.io/) to run containers that serve a list of recommended movie ids, given a user id. 
+The instruction covers 1. running a single container and 2. running two containers with a load balancer. 
+A simple load testing is conducted to compare their performances.
+
 ## Installation
 Reference: https://www.atlantic.net/dedicated-server-hosting/how-to-install-and-use-podman-on-ubuntu-20-04/
 
-Install podman:
+Install podman on Ubuntu 20.04:
 ```bash
 sudo apt-get update -y
 
