@@ -1,0 +1,34 @@
+openapi: "3.0.0"
+info:
+  title: "podman-movie-demo"
+  description: "Simple backend API for movie recommendation"
+  version: "1.0.0"
+  termsOfService: ""
+  contact:
+    email: "example@gmail.com"
+  license:
+    name: "TBA"
+    url: "TBA"
+
+paths:
+  /recommend/{user_id}:
+    get:
+      operationId: "prediction.recommend"
+      summary: Returns an ordered comma separated list of 10 movie IDs in a single line.
+      description: Returns an ordered comma separated list of 10 movie IDs in a single line.
+
+      parameters:
+        - in: path
+          name: user_id
+          schema:
+            type: string
+          required: true
+          example: 610
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: "1204,2324,3275,2019,1266,898,1223,1233,1217,1104"
